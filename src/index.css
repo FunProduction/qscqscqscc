@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', serif;
+  --color-bordeaux-50: #fdf2f4;
+  --color-bordeaux-100: #fce7eb;
+  --color-bordeaux-200: #f8d0d9;
+  --color-bordeaux-300: #f2aab9;
+  --color-bordeaux-400: #e87990;
+  --color-bordeaux-500: #d94666;
+  --color-bordeaux-600: #c02649;
+  --color-bordeaux-700: #a01a3a;
+  --color-bordeaux-800: #851833;
+  --color-bordeaux-900: #71182e;
+  --color-bordeaux-950: #400916;
+}
+
+body {
+  background-color: #050505;
+  color: #f5f5f5;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, .font-romantic {
+  font-family: var(--font-serif);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a; 
+}
+::-webkit-scrollbar-thumb {
+  background: #71182e; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d94666; 
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+.heart-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  animation: float linear infinite;
+}
